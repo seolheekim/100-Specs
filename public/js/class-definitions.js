@@ -63,6 +63,7 @@ var golden_ratio = 1.61803398874;
  *
  */
 
+var earths_water_composition = 0.71;
 
 /* Step 8
  *
@@ -70,6 +71,8 @@ var golden_ratio = 1.61803398874;
  * and assign the value of club_name to "Fight Club"
  *
  */
+
+ var club_name = "Fight Club";
 
 
 /* Step 9
@@ -82,6 +85,11 @@ var golden_ratio = 1.61803398874;
  *   unknown => undefined
  */
 
+var gender = {
+  female: "female",
+  male: "male",
+  unknown: undefined
+}
 
 /* Step 10
  *
@@ -95,6 +103,13 @@ var golden_ratio = 1.61803398874;
  *   gender  => gender.female
  *
  */
+
+ var princess_leia = {
+  name: "Leia Organa",
+  money: 890,
+  age: 20,
+  gender: gender.female
+ }
 
 
 /* Step 11
@@ -110,6 +125,16 @@ var golden_ratio = 1.61803398874;
  */
 
 
+
+ var domains = {
+  "ycombinator.com" : "198.41.190.47",
+  "laughingsquid.com" : "162.159.247.97",
+  "slumlordhosting.com" : "198.61.179.126",
+  "jsonformatter.curiousconcept.com" : "104.28.5.70"
+ }
+
+
+
 /* Step 12
  *
  * Define a literal object named "browsers"
@@ -123,6 +148,15 @@ var golden_ratio = 1.61803398874;
  *   Konqueror  => "konqueror.org"
  *
  */
+
+ var browsers = {
+  Chromium: "google.com",
+  Safari: "apple.com",
+  Opera: "opera.com",
+  Firefox: "mozilla.org",
+  Sleipnir: "fenrir-inc.com",
+  Konqueror: "konqueror.org"
+ }
 
 
 /* Step 13
