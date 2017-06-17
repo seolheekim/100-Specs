@@ -5,6 +5,8 @@
  *
  */
 
+ var unicorn = null;
+
 
 /* Step 2
  *
@@ -13,6 +15,7 @@
  *
  */
 
+var videogame_system = "Atari";
 
 /* Step 3
  *
@@ -21,6 +24,7 @@
  *
  */
 
+var sahara_animal = "The Addax";
 
 /* Step 4
  *
@@ -30,6 +34,7 @@
  * Capitalize the names.
  */
 
+var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
 /* Step 5
  *
@@ -39,6 +44,8 @@
  *
  */
 
+ var galilean_moons = ["Io", "Europa", "Ganymede", "Callisto"];
+
 
 /* Step 6 φ
  *
@@ -47,6 +54,7 @@
  *
  */
 
+var golden_ratio = 1.61803398874;
 
 /* Step 7
  *
