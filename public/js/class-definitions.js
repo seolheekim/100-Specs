@@ -346,6 +346,16 @@ function addNumbers(num1, num2) {
  *
  */
 
+function installLinux(type){
+  var installLinux = linuxFlavors.indexOf(type)
+  if(installLinux !== -1){
+
+    return true;
+  }else{
+    return false;
+  }
+
+}
 
 /* Step 23
  *
