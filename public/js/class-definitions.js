@@ -462,17 +462,15 @@ function listLivingOrgClass(){
  function favoritePlanet(currentPlanet){
   var planetIndex = planets.indexOf(currentPlanet);
 
-if(planetIndex !== -1){
+    if(planetIndex !== -1){
       var randomPlanet = planets[Math.floor(Math.random() * planets.length)];
       return "I'm from " + currentPlanet + "," + " but I wish I could go to " + randomPlanet + "!"
     }
-
     if(planetIndex){
       return currentPlanet + " is not a planet!"
     }
  };
 
-// return "I'm from " + planets[currentPlanet] + "," + " but I wish I could go to " + randomPlanet
 
 /* Step 27
  *
@@ -497,6 +495,30 @@ if(planetIndex !== -1){
  *
  */
 
+function Person(name, money, age, gender) {
+    this.name = name,
+    this.money = money,
+    this.age = age,
+    this.gender = gender
+}
+
+   // spendMoney(){
+   //    this.money = 0;
+   //    if(this.money > 100){
+   //      return true;
+   //    }
+   // }
+
+   // earnMoney(){
+
+   // }
+
+Person.prototype.spendMoney = function(spend) {
+  if(this.money >= 100){
+    this.money -= spend;
+    return true;
+  }
+}
 
 /* Step 28
  *
