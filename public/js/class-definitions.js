@@ -346,8 +346,8 @@ function addNumbers(num1, num2) {
  *
  */
 
-function installLinux(type){
-  var installLinux = linuxFlavors.indexOf(type)
+function installLinux(linux){
+  var installLinux = linuxFlavors.indexOf(linux)
   if(installLinux !== -1){
 
     return true;
@@ -376,6 +376,21 @@ function installLinux(type){
  */
 
 
+
+function drink(beerName){
+  // console.log(beers);
+  if(beers.hasOwnProperty(beerName)){
+    if (typeof beers[beerName] === "string"){
+      return "This " + beerName + " is " + beers[beerName] + ".";
+    } else if (Array.isArray(beers[beerName]) === true){
+      return "This " + beerName + " is " + beers[beerName][0] + " and " + beers[beerName][1] + ".";
+    }
+  } else {
+    return false;
+  }
+}
+
+
 /* Step 24
  *
  * Define a function named "browseURL" that takes
@@ -387,6 +402,10 @@ function installLinux(type){
  * @return {String if true else return false}
  *
  */
+
+ function browseURL(browser){
+
+ }
 
 
 /* Step 25
