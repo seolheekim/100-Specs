@@ -502,23 +502,19 @@ function Person(name, money, age, gender) {
     this.gender = gender
 }
 
-   // spendMoney(){
-   //    this.money = 0;
-   //    if(this.money > 100){
-   //      return true;
-   //    }
-   // }
-
-   // earnMoney(){
-
-   // }
-
 Person.prototype.spendMoney = function(spend) {
   if(this.money >= 100){
     this.money -= spend;
     return true;
   }
 }
+
+Person.prototype.earnMoney = function() {
+  this.money += 10
+}
+
+var seolhee = new Person("seolhee", 100, 29, "female")
+seolhee.earnMoney()
 
 /* Step 28
  *
@@ -533,6 +529,14 @@ Person.prototype.spendMoney = function(spend) {
  */
 
 
+function purchaseLaptop(laptop){
+  if(laptopCosts.hasOwnProperty(laptop)){
+      return laptopCosts[laptop].toString()
+  }else{
+    return -1;
+  }
+}
+
 /* Step 29
  *
  * Define a function named "canTalkAbout" that takes
@@ -545,6 +549,16 @@ Person.prototype.spendMoney = function(spend) {
  *
  */
 
+  // var club_name = "Fight Club";
+
+function canTalkAbout(club) {
+  if( club === club_name){
+    return false;
+  }else{
+    return true;
+
+  }
+}
 
 /* Step 30
  *
