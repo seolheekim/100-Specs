@@ -425,10 +425,17 @@ function drink(beerName){
  *
  */
 
+ // var livingOrganismClassification = ["Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species"];
+
+
 
 function listLivingOrgClass(){
-
-}
+  var orgClass = " ";
+  for(var i = 0; i < livingOrganismClassification.length; i++){
+    orgClass = orgClass + livingOrganismClassification[i];
+  }
+  return `<ul><li>${orgClass}</li></ul>`
+};
 
 /* Step 26
  *
@@ -449,6 +456,10 @@ function listLivingOrgClass(){
  * @return {String}
  *
  */
+
+ function favoritePlanet(){
+
+ };
 
 
 /* Step 27
