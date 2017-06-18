@@ -457,10 +457,22 @@ function listLivingOrgClass(){
  *
  */
 
- function favoritePlanet(){
+ // var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
+ function favoritePlanet(currentPlanet){
+  var planetIndex = planets.indexOf(currentPlanet);
+
+if(planetIndex !== -1){
+      var randomPlanet = planets[Math.floor(Math.random() * planets.length)];
+      return "I'm from " + currentPlanet + "," + " but I wish I could go to " + randomPlanet + "!"
+    }
+
+    if(planetIndex){
+      return currentPlanet + " is not a planet!"
+    }
  };
 
+// return "I'm from " + planets[currentPlanet] + "," + " but I wish I could go to " + randomPlanet
 
 /* Step 27
  *
