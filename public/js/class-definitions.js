@@ -403,9 +403,16 @@ function drink(beerName){
  *
  */
 
- function browseURL(browser){
-
- }
+ function browseURL(browserName){
+    // console.log(browsers)
+    if(browsers.hasOwnProperty(browserName)){
+      if(typeof browsers[browserName] === "string"){
+        return browsers[browserName];
+      }
+    }else {
+      return false;
+    }
+ };
 
 
 /* Step 25
@@ -418,6 +425,10 @@ function drink(beerName){
  *
  */
 
+
+function listLivingOrgClass(){
+
+}
 
 /* Step 26
  *
