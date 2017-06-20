@@ -581,6 +581,16 @@ function canTalkAbout(club) {
  *
  */
 
+function Pen(color){
+  this.color = color;
+}
+
+Pen.prototype.write = function(message){
+  return message = this.color + ": " + "Yar Yar Yar";
+}
+
+var redPen = new Pen("red");
+redPen.write()
 
 /* Step 31
  *
@@ -609,6 +619,28 @@ function canTalkAbout(club) {
  *
  */
 
+function Garden(plantsTotal){
+  this.plantsTotal = plantsTotal;
+  this.isWatered = false;
+}
+
+Garden.prototype.water = function(){
+  this.isWatered = true;
+
+}
+
+Garden.prototype.grow = function(){
+  if(this.isWatered === true){
+    return this.plantsTotal++;
+  }else{
+    return false;
+  }
+
+}
+
+var waterGarden = new Garden(5)
+waterGarden.water();
+waterGarden.grow();
 
 /* Step 32
  *
@@ -626,7 +658,22 @@ function canTalkAbout(club) {
  *   removePlanet
  *
  */
+// var planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"];
 
+function SolarSystem() {
+  this.planets = [];
+}
+
+
+SolarSystem.prototype.addPlanet = function(){
+  if(this.planets >= 0){
+    this.planets.push(planets++)
+  }
+}
+
+SolarSystem.prototype.removePlanet = function() {
+  this.planets.pop(planets)
+}
 
 /* Step 33
  *
@@ -661,6 +708,36 @@ function canTalkAbout(club) {
  *
  */
 
+function PrincessLeia(name, money, age, gender){
+  this.isInTrouble = null
+  Person.call(this, name, money, age, gender)
+}
+
+Person.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return "Leia shoots her gun wildly"
+
+}
+
+Person.prototype.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope"
+
+}
+
+Person.prototype.marries = function(husband) {
+  if(husband === "Han Solo"){
+    return true;
+  }else if(husband === "Luke Skywalker"){
+    return "Gross!"
+  }
+
+}
+
+PrincessLeia.prototype = Object.create( Person.prototype, {
+  constructor: PrincessLeia
+})
+
 
 /* Step 34
  *
@@ -680,6 +757,21 @@ function canTalkAbout(club) {
  *
  */
 
+function Stapler(color, maxPapers) {
+  this.color = color
+  this.maxPapers = maxPapers
+}
+
+Stapler.prototype.staplePapers = function(papers) {
+  if(this.maxPapers < papers){
+    return false
+  }else{
+    return true
+  }
+}
+
+var myStapler = new Stapler("red", 5)
+myStapler.staplePapers()
 
 /* Step 35
  *
@@ -720,6 +812,59 @@ function canTalkAbout(club) {
  *
  */
 
+function Scientist(name, money, age, gender) {
+  this.disciplines = []
+  this.discoveries = []
+  Person.call(this, name, money, age, gender)
+
+}
+
+// * Add a method named 'addDiscipline' that takes a string as an argument and
+//  * adds it to the discipline property. Return the value of the discipline property
+//  *
+
+Person.prototype.addDiscipline = function(discip) {
+  this.disciplines.push(discip)
+  return this.disciplines
+}
+
+// * Add a method named 'checkDisciple' that takes a string as an argument and
+//  * checks if the argument can be found in the discipline property. Return false
+//  * if it is not found otherwise return back true.
+//  *
+
+Person.prototype.checkDiscipline = function(checkDiscip) {
+  var checkArray = this.disciplines.indexOf(checkDiscip)
+  if(checkArray !== -1){
+    return true
+  }else{
+    return false
+  }
+
+}
+
+// * Add a method named 'addDiscovery' that takes a string as an argument and
+//  * adds it to the discoveries property. Return back the contents of the discoveries
+//  * property as a String made up of all the elements found see below
+
+Person.prototype.addDiscovery = function(discov) {
+  this.discoveries.push(discov)
+  var found = this.discoveries.length
+  if(found === 1){
+    return "I discovered " + this.discoveries + "."
+  }else if(found === 2){
+    return "I discovered " + this.discoveries[0] + " and " + this.discoveries[1] + "."
+  }else if(found === 3){
+    return "I discovered " + this.discoveries[0] + ", " + this.discoveries[1] + ", and " + this.discoveries[2] + "."
+  }else{
+    return "SHUT UP!"
+  }
+
+}
+
+Scientist.prototype = Object.create( Person.prototype, {
+  constructor: Scientist
+})
 
 /* Step 36
  *
@@ -741,6 +886,7 @@ function canTalkAbout(club) {
  *   rob
  *
  */
+
 
 
 /* Step 37
@@ -915,6 +1061,12 @@ function canTalkAbout(club) {
  * @param {string} gender  male or female
  */
 
+function Animal(species, gender){
+  this.species = species
+  this.gender = gender
+}
+
+
 
 /**
  * Step 51
@@ -923,6 +1075,11 @@ function canTalkAbout(club) {
  * @param {string} make The vehicle's make
  * @param {string} model The vehicle's model
  */
+
+ function Vehicle(make, model){
+  this.make = make
+  this.model = model
+ }
 
 
 /**
@@ -935,6 +1092,14 @@ function canTalkAbout(club) {
  *
  */
 
+ function Shape(sides){
+  if( sides >= 3 ){
+    return this.sides = sides
+  }else{
+    return this.sides = null;
+  }
+ }
+
 
 /**
  * Step 53
@@ -944,6 +1109,12 @@ function canTalkAbout(club) {
  * @param {boolean} isOpen     Whether the box is opened or closed
  */
 
+function Box(contents, isOpen){
+  this.contents = contents
+  this.isOpen = isOpen
+}
+
+
 
 /**
  * Step 54
@@ -952,6 +1123,9 @@ function canTalkAbout(club) {
  * @param {boolean} isOpen Whether the door is opened or closed
  */
 
+function Door(isOpen){
+  this.isOpen = isOpen
+}
 
 /**
  * Step 55
@@ -961,6 +1135,10 @@ function canTalkAbout(club) {
  * @param {string} color The shoe color
  */
 
+function Shoe(size, color){
+  this.size = size
+  this.color = color
+}
 
 /**
  * Step 56
@@ -969,6 +1147,9 @@ function canTalkAbout(club) {
  * @param {number} stories How many stories tall the house is
  */
 
+function House(stories){
+  this.stories = stories
+}
 
 /**
  * Step 57
@@ -977,6 +1158,9 @@ function canTalkAbout(club) {
  * @param {boolean} isOn Whether the light is on or off
  */
 
+function Lightbulb(isOn){
+  this.isOn = isOn;
+}
 
 /**
  * Step 58
@@ -985,6 +1169,9 @@ function canTalkAbout(club) {
  * @param {string} flavor The cookie's flavor
  */
 
+function Cookie(flavor){
+  this.flavor = flavor;
+}
 
 /**
  * Step 59
@@ -993,6 +1180,9 @@ function canTalkAbout(club) {
  * @param {Array} foods All the foods in the meal
  */
 
+function Meal(foods){
+  this.foods = foods
+}
 
 /**
  * Create a new instance of the Classes you defined above, below!
@@ -1000,45 +1190,48 @@ function canTalkAbout(club) {
  */
 
 
+
+
 // Create 2 different species of animals
-var george;
-var nemo;
+var george = new Animal("Monkey", "male")
+var nemo = new Animal("Fish", "male")
 
 // Create 2 different vehicles
-var civic;
-var forte;
+var civic = new Vehicle("Honda", "Civic")
+var forte = new Vehicle("KIA", "Forte")
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4)
+var hexagon = new Shape(6)
 
 // Create 2 boxes
-var catBox;
-var christmasPresent;
+var cat = new Animal("Cat", "female")
+var catBox = new Box(cat, true)
+var christmasPresent = new Box("exist", false)
 
 // Create 2 doors
-var automaticDoor;
-var bankVault;
+var automaticDoor = new Door(true)
+var bankVault = new Door(false)
 
 // Create 2 shoes
-var rubySlippers;
-var dressShoes;
+var rubySlippers = new Shoe(7, "red")
+var dressShoes = new Shoe(10, "black")
 
 // Create 2 houses
-var singleStory;
-var twoStory;
+var singleStory = new House(1)
+var twoStory = new House(2)
 
 // Create 2 lightbulbs
-var incandescent;
-var halogen;
+var incandescent = new Lightbulb(true)
+var halogen = new Lightbulb(false)
 
 // Create 2 cookies of different flavors
-var chocolateChip;
-var gingerbread;
+var chocolateChip = new Cookie("chocolate")
+var gingerbread = new Cookie("gingerbread")
 
 // Create 2 different meals
-var breakfast;
-var dinner;
+var breakfast = new Meal(["cereal", "milk"])
+var dinner = new Meal(["fish", "vegetables"])
 
 
  /* Steps 81 to 90
@@ -1063,6 +1256,15 @@ var dinner;
  *
  */
 
+Animal.prototype.isWarmBlooded = function() {
+  if(this.species === "Fish"){
+    return false
+  }else if(this.species === "Monkey" || this.species === "Bird"){
+    return true
+  }else{
+    return "Could not determine if warm-blooded"
+  }
+}
 
 /* Step 82
  *
@@ -1072,6 +1274,14 @@ var dinner;
  *
  */
 
+Vehicle.prototype.drive = function(streetName) {
+  if(typeof streetName === "string" && streetName){
+    return "Driving on " + streetName
+  }else{
+    return "Driving forward"
+  }
+
+}
 
  /* Step 83
  *
@@ -1091,6 +1301,35 @@ var dinner;
  *
  */
 
+Shape.prototype.getType = function() {
+  if(this.sides === 3){
+    return "triangle"
+  }
+  if(this.sides === 4){
+    return "quadrilateral"
+  }
+  if(this.sides === 5){
+    return "pentagon"
+  }
+  if(this.sides === 6){
+    return "hexagon"
+  }
+  if(this.sides === 7){
+    return "heptagon"
+  }
+  if(this.sides === 8){
+    return "octagon"
+  }
+  if(this.sides === 9){
+    return "nonagon"
+  }
+  if(this.sides === 10){
+    return "decagon"
+  }else{
+    return "Could not determine type"
+  }
+
+}
 
 /* Step 84
  *
@@ -1101,6 +1340,14 @@ var dinner;
  *
  */
 
+ Box.prototype.openBox = function(){
+  if(this.isOpen === false){
+    return this.isOpen = true
+  }else{
+    return false
+  }
+ }
+
 
  /* Step 85
  *
@@ -1110,6 +1357,13 @@ var dinner;
  *
  */
 
+Door.prototype.openClose = function(){
+  if(this.isOpen === false){
+    return this.isOpen = true;
+  }else if(this.isOpen === true){
+    return this.isOpen = false;
+  }
+}
 
 /* Step 86
  *
@@ -1118,6 +1372,9 @@ var dinner;
  *
  */
 
+Shoe.prototype.findShoes = function() {
+  return "Found " + this.color + " shoes of size " + this.size
+}
 
  /* Step 87
  *
@@ -1128,6 +1385,13 @@ var dinner;
  *
  */
 
+House.prototype.isATallStory = function(storiesTooTall) {
+  if(this.stories >= storiesTooTall){
+    return true;
+  }else{
+    return false;
+  }
+}
 
  /* Step 88
  *
@@ -1139,6 +1403,14 @@ var dinner;
  *
  */
 
+ Lightbulb.prototype.flipSwitch = function(on) {
+  if(on === "on"){
+    return this.isOn = true;
+  }else{
+    return false;
+  }
+ }
+
 
  /* Step 89
  *
@@ -1148,6 +1420,15 @@ var dinner;
  *
  */
 
+
+
+Cookie.prototype.swipedByCookieMonster = function(dayOfTheWeek){
+  if(this.flavor === "chocolate" && dayOfTheWeek === "Monday"){
+    return true
+  }else {
+    return false
+  }
+}
 
  /* Step 90
  *
@@ -1162,6 +1443,8 @@ var dinner;
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
  *
  */
+
+
 
 
  /* Steps 91 to 100
